@@ -1,0 +1,160 @@
+{
+  "groups": [
+    {
+      "name": "jobgraph",
+      "type": "com.jobgraph.config.AppProperties",
+      "sourceType": "com.jobgraph.config.AppProperties"
+    },
+    {
+      "name": "jobgraph.adzuna",
+      "type": "com.jobgraph.config.AppProperties$Adzuna",
+      "sourceType": "com.jobgraph.config.AppProperties",
+      "sourceMethod": "public com.jobgraph.config.AppProperties.Adzuna getAdzuna() "
+    },
+    {
+      "name": "jobgraph.demo",
+      "type": "com.jobgraph.config.AppProperties$Demo",
+      "sourceType": "com.jobgraph.config.AppProperties",
+      "sourceMethod": "public com.jobgraph.config.AppProperties.Demo getDemo() "
+    },
+    {
+      "name": "jobgraph.email",
+      "type": "com.jobgraph.config.AppProperties$Email",
+      "sourceType": "com.jobgraph.config.AppProperties",
+      "sourceMethod": "public com.jobgraph.config.AppProperties.Email getEmail() "
+    },
+    {
+      "name": "jobgraph.llm",
+      "type": "com.jobgraph.config.AppProperties$Llm",
+      "sourceType": "com.jobgraph.config.AppProperties",
+      "sourceMethod": "public com.jobgraph.config.AppProperties.Llm getLlm() "
+    },
+    {
+      "name": "jobgraph.matching",
+      "type": "com.jobgraph.config.AppProperties$Matching",
+      "sourceType": "com.jobgraph.config.AppProperties",
+      "sourceMethod": "public com.jobgraph.config.AppProperties.Matching getMatching() "
+    },
+    {
+      "name": "jobgraph.polling",
+      "type": "com.jobgraph.config.AppProperties$Polling",
+      "sourceType": "com.jobgraph.config.AppProperties",
+      "sourceMethod": "public com.jobgraph.config.AppProperties.Polling getPolling() "
+    },
+    {
+      "name": "jobgraph.slack",
+      "type": "com.jobgraph.config.AppProperties$Slack",
+      "sourceType": "com.jobgraph.config.AppProperties",
+      "sourceMethod": "public com.jobgraph.config.AppProperties.Slack getSlack() "
+    }
+  ],
+  "properties": [
+    {
+      "name": "jobgraph.adzuna.app-id",
+      "type": "java.lang.String",
+      "description": "From https:\/\/developer.adzuna.com — free tier is 250 calls\/day.",
+      "sourceType": "com.jobgraph.config.AppProperties$Adzuna"
+    },
+    {
+      "name": "jobgraph.adzuna.app-key",
+      "type": "java.lang.String",
+      "sourceType": "com.jobgraph.config.AppProperties$Adzuna"
+    },
+    {
+      "name": "jobgraph.demo.mode",
+      "type": "java.lang.Boolean",
+      "description": "When true, TrackerAgent skips company-name matching and applies the classification to the most recent open tracking row for the user. Set jobgraph.demo.mode=true in application.yml for presentations.",
+      "sourceType": "com.jobgraph.config.AppProperties$Demo"
+    },
+    {
+      "name": "jobgraph.email.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Feature flag — when false, IMAP is entirely skipped and only  the manual-paste endpoint works.",
+      "sourceType": "com.jobgraph.config.AppProperties$Email"
+    },
+    {
+      "name": "jobgraph.email.fetch-batch-size",
+      "type": "java.lang.Integer",
+      "description": "Max emails fetched per poll — guards against one bad run  flooding the LLM when a user has thousands of unread messages.",
+      "sourceType": "com.jobgraph.config.AppProperties$Email"
+    },
+    {
+      "name": "jobgraph.email.folder",
+      "type": "java.lang.String",
+      "description": "INBOX by default; change to a labeled folder like \"JobApps\".",
+      "sourceType": "com.jobgraph.config.AppProperties$Email"
+    },
+    {
+      "name": "jobgraph.email.imap-host",
+      "type": "java.lang.String",
+      "description": "IMAP server hostname, e.g. imap.gmail.com",
+      "sourceType": "com.jobgraph.config.AppProperties$Email"
+    },
+    {
+      "name": "jobgraph.email.imap-port",
+      "type": "java.lang.Integer",
+      "description": "IMAPS port — standard is 993.",
+      "sourceType": "com.jobgraph.config.AppProperties$Email"
+    },
+    {
+      "name": "jobgraph.email.password",
+      "type": "java.lang.String",
+      "description": "App password (NOT account password) for Gmail\/Outlook 2FA users.",
+      "sourceType": "com.jobgraph.config.AppProperties$Email"
+    },
+    {
+      "name": "jobgraph.email.poll-interval-minutes",
+      "type": "java.lang.Integer",
+      "description": "How often the scheduler polls for new mail. Independent of the  job-polling interval so mail can be more responsive than scraping.",
+      "sourceType": "com.jobgraph.config.AppProperties$Email"
+    },
+    {
+      "name": "jobgraph.email.username",
+      "type": "java.lang.String",
+      "description": "Full email address used to sign in.",
+      "sourceType": "com.jobgraph.config.AppProperties$Email"
+    },
+    {
+      "name": "jobgraph.llm.api-key",
+      "type": "java.lang.String",
+      "sourceType": "com.jobgraph.config.AppProperties$Llm"
+    },
+    {
+      "name": "jobgraph.llm.base-url",
+      "type": "java.lang.String",
+      "sourceType": "com.jobgraph.config.AppProperties$Llm"
+    },
+    {
+      "name": "jobgraph.llm.model",
+      "type": "java.lang.String",
+      "sourceType": "com.jobgraph.config.AppProperties$Llm"
+    },
+    {
+      "name": "jobgraph.llm.provider",
+      "type": "java.lang.String",
+      "sourceType": "com.jobgraph.config.AppProperties$Llm"
+    },
+    {
+      "name": "jobgraph.matching.alert-threshold",
+      "type": "java.lang.Double",
+      "description": "Scores at or above this value trigger a Slack alert.",
+      "sourceType": "com.jobgraph.config.AppProperties$Matching"
+    },
+    {
+      "name": "jobgraph.polling.interval-minutes",
+      "type": "java.lang.Integer",
+      "sourceType": "com.jobgraph.config.AppProperties$Polling"
+    },
+    {
+      "name": "jobgraph.slack.channel",
+      "type": "java.lang.String",
+      "sourceType": "com.jobgraph.config.AppProperties$Slack"
+    },
+    {
+      "name": "jobgraph.slack.webhook-url",
+      "type": "java.lang.String",
+      "sourceType": "com.jobgraph.config.AppProperties$Slack"
+    }
+  ],
+  "hints": []
+}

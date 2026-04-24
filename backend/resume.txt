@@ -1,0 +1,24 @@
+Hardi Shah
+hardi.shah@example.com | (555) 123-4567 | LinkedIn: linkedin.com/in/hardishah
+
+SUMMARY
+Software engineer with experience in Java, Spring Boot, distributed systems, and AI/ML integration.
+Passionate about building scalable backend services and multi-agent architectures.
+
+EDUCATION
+Bachelor of Science in Computer Science
+University of Example, 2022
+
+SKILLS
+Java, Spring Boot, Akka, PostgreSQL, Docker, Kubernetes, React, TypeScript,
+Python, REST APIs, WebSockets, CI/CD, Git, Agile/Scrum
+
+EXPERIENCE
+Software Engineer — Acme Corp (2022–Present)
+- Built microservices handling 10K+ RPM using Spring Boot and Akka actors
+- Designed event-driven pipelines for real-time data processing
+- Integrated LLM APIs (Groq, Mistral) for automated text classification
+
+Intern — Beta Inc (Summer 2021)
+- Developed internal dashboards with React and Tailwind CSS
+- Wrote integration tests with JUnit 5 and Testcontainers
